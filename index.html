@@ -1,16 +1,28 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Textarea</title>
-	<style>
-		textarea {
-			width: 100%;
-		}
-	</style>
-</head>
-<body>
-	<textarea name="" id="" cols="30" rows="30"></textarea>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Textarea</title>
+    <style>
+      textarea {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <textarea name="" required id="" cols="30" rows="30"></textarea>
+      <input type="submit" value="Olah" />
+    </form>
+    <script>
+      const form = document.querySelector("form");
+      form.addEventListener("submit", (x) => {
+        x.preventDefault();
+        const text = x.target.querySelector("textarea").value;
+        localStorage.isi = text;
+        location.href = "tampil.html";
+      });
+    </script>
+  </body>
 </html>
